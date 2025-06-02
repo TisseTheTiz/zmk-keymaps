@@ -1,0 +1,12 @@
+[submodule "zmk"]
+	path = zmk
+	url = https://github.com/zmkfirmware/zmk.git
+[submodule "boards/shields/klor"]
+	path = boards/shields/klor
+	url = https://github.com/TisseTheTiz/zmk-config-klor
+[submodule "boards/shields/klotz"]
+	path = boards/shields/klotz
+	url = https://github.com/TisseTheTiz/zmk-config-klotz
+[submodule "boards/shields/endgame"]
+	path = boards/shields/endgame
+	url = https://github.com/TisseTheTiz/zmk-config-endgame
