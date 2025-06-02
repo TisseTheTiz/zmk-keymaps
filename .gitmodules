@@ -10,3 +10,6 @@
 [submodule "boards/shields/endgame"]
 	path = boards/shields/endgame
 	url = https://github.com/TisseTheTiz/zmk-config-endgame
+[submodule "headers"]
+	path = headers
+	url = https://github.com/TisseTheTiz/zmk-config-headers
