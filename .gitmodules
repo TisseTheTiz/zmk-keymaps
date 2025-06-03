@@ -7,3 +7,9 @@
 [submodule "boards/shields/endgame"]
 	path = boards/shields/endgame
 	url = https://github.com/TisseTheTiz/zmk-config-endgame
+[submodule "modules/zmk-component-rp2040-zero"]
+	path = modules/zmk-component-rp2040-zero
+	url = https://github.com/nmunnich/zmk-component-rp2040-zero.git
+[submodule "boards/shields/klotz"]
+	path = boards/shields/klotz
+	url = https://github.com/TisseTheTiz/zmk-config-klotz
