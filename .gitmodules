@@ -13,3 +13,6 @@
 [submodule "boards/shields/klotz"]
 	path = boards/shields/klotz
 	url = https://github.com/TisseTheTiz/zmk-config-klotz
+[submodule "boards/shields/klor"]
+	path = boards/shields/klor
+	url = https://github.com/TisseTheTiz/zmk-config-klor
