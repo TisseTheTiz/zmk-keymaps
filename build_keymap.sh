@@ -7,12 +7,13 @@ cd zmk/app/ || exit
 if [ $# == 0 ]
 then
    echo "USAGE: $0 [keyboard0] [keyboard1] ..."
-   printf 'AVAILABLE KEYBOARDS: \t endgame\n \t\t\t klotz'
+   printf 'AVAILABLE KEYBOARDS: \t endgame\n \t\t\t blendgame\n \t\t\t klotz\n \t\t\t klor'
 else
     for arg
     do
         case "$arg" in
             endgame)    ;;
+            blendgame)  ;;
             klotz)      ;;
             klor)       ;;
             *)          echo "ERROR: Keyboard '$arg' is invalid."
@@ -27,6 +28,9 @@ do
     case "$arg" in
         endgame)    west build -p -b rp2040_zero -- -DSHIELD=endgame -DZMK_CONFIG="$DIR/boards/shields/endgame/config" -DZMK_EXTRA_MODULES="$DIR/modules/zmk-component-rp2040-zero"
                     mv build/zephyr/zmk.uf2 "$DIR/flash/endgame.uf2" || exit
+                    ;;
+        blendgame)  west build -p -b nice_nano_v2 -- -DSHIELD=blendgame -DZMK_CONFIG="$DIR/boards/shields/blendgame/config" 
+                    mv build/zephyr/zmk.uf2 "$DIR/flash/blendgame.uf2" || exit
                     ;;
         klotz)      west build -p -b nice_nano_v2 -- -DSHIELD=klotz_left -DZMK_CONFIG="$DIR/boards/shields/klotz/config"
                     mv build/zephyr/zmk.uf2 "$DIR/flash/klotz_left.uf2" || exit
@@ -45,6 +49,8 @@ for arg
 do
     case "$arg" in
         endgame)    echo "Flash file for Endgame stored: $DIR/flash/endgame.uf2"
+                    ;;
+        blendgame)  echo "Flash file for BLEndgame stored: $DIR/flash/blendgame.uf2"
                     ;;
         klotz)      echo "Flash files for KLOTZ stored: $DIR/flash/klotz_left.uf2 and $DIR/flash/klotz_right.uf2"
                     ;;

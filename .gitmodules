@@ -16,3 +16,6 @@
 [submodule "boards/shields/klor"]
 	path = boards/shields/klor
 	url = https://github.com/TisseTheTiz/zmk-config-klor
+[submodule "boards/shields/blendgame"]
+	path = boards/shields/blendgame
+	url = https://github.com/TisseTheTiz/zmk-config-blendgame.git
